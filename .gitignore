@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Screenshots
+*.png
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+
+# Logs
+*.log
