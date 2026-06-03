@@ -148,7 +148,7 @@ class GameOrchestrator {
     const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     const date = `${pad(now.getDate())}-${months[now.getMonth()]}-${now.getFullYear()}`;
     const time = `${pad(now.getHours())}.${pad(now.getMinutes())}.${pad(now.getSeconds())}`;
-    return `pong-result_${date}_${time}.png`;
+    return `screenshots/pong-result_${date}_${time}.png`;
   }
 
   _formatTimestamp() {

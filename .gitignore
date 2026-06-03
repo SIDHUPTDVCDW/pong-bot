@@ -2,7 +2,7 @@
 node_modules/
 
 # Screenshots
-*.png
+screenshots/
 
 # macOS
 .DS_Store
