@@ -1,6 +1,6 @@
 const GameConfig = Object.freeze({
   browser: {
-    headless: true,       // true = headless, false = headed
+    headless: false,       // true = headless, false = headed
     viewportWidth: 1280,
     viewportHeight: 800
   },
