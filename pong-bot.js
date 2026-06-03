@@ -25,9 +25,9 @@ const { chromium } = require('playwright');
 
 const GameConfig = Object.freeze({
   browser: {
-    headless: true,
-    viewportWidth: 800,
-    viewportHeight: 600
+    headless: true, // Set to false for debugging (shows the browser)
+    viewportWidth: 1280,
+    viewportHeight: 800
   },
   url: 'https://www.ponggame.org/',
   menu: {
