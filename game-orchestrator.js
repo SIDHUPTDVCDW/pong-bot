@@ -131,9 +131,16 @@ class GameOrchestrator {
       if (dx < width * GameConfig.timing.refocusSafetyZone) return false;
     }
 
+  //   const forced = (s.loop - s.lastRefocus) >= interval * 4;
+  //   return forced || true;
+  // }
+
+
     const forced = (s.loop - s.lastRefocus) >= interval * 4;
-    return forced || true;
-  }
+    if (forced) return true;
+
+    return true;
+}
 
   _generateScreenshotName() {
     const now = new Date();
