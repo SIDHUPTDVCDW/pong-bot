@@ -33,7 +33,7 @@ const GameConfig = Object.freeze({
   menu: {
     players: '1',
     input: 'k',
-    difficulty: 'e',
+    difficulty: 'h',
     stepDelay: 200,
     loadDelay: 400
   },
