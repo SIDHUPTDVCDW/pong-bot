@@ -2,8 +2,17 @@ const GameConfig = Object.freeze({
   browser: {
     headless: false,       // true = headless, false = headed
     viewportWidth: 1280,
-    viewportHeight: 800
+    viewportHeight: 800,
+    launchArgs: ['--start-maximized']   // ✅ maximised window
   },
+
+  // browser: {
+  //   headless: false,        // keep headed
+  //   launchOptions: {
+  //     args: ['--start-maximized']   // ✅ maximised window
+  //   },
+  //   viewport: null          // ✅ disables fixed size → allows full screen
+  // },
   url: 'https://www.ponggame.org/',
   menu: {
     players: '1',

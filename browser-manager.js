@@ -8,14 +8,23 @@ class BrowserManager {
     this.canvas = null;
   }
 
+  // async launch() {
+  //   const { headless, viewportWidth, viewportHeight } = GameConfig.browser;
+  //   this.browser = await chromium.launch({ headless });
+  //   const context = await this.browser.newContext({
+  //     viewport: { width: viewportWidth, height: viewportHeight }
+  //   });
+  //   this.page = await context.newPage();
+  // }
+
   async launch() {
-    const { headless, viewportWidth, viewportHeight } = GameConfig.browser;
-    this.browser = await chromium.launch({ headless });
+    const { headless, launchArgs } = GameConfig.browser;
+    this.browser = await chromium.launch({ headless, args: launchArgs || [] });
     const context = await this.browser.newContext({
-      viewport: { width: viewportWidth, height: viewportHeight }
+      viewport: null    // null = use full window size instead of fixed viewport
     });
     this.page = await context.newPage();
-  }
+}
 
   async navigateToGame() {
     await this.page.goto(GameConfig.url, { waitUntil: 'domcontentloaded' });
